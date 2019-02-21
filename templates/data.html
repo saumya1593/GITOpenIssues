@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Welcome to Dashboard</title>
+</head>
+<body>
+<TABLE BORDER="5"    WIDTH="50%"   CELLPADDING="4" CELLSPACING="3">
+   <TR ALIGN="CENTER">
+      <TH COLSPAN="2"><BR><H3>Issues</H3>
+      </TH>
+   </TR>
+   <TR>
+      <TH>Total Open Issues</TH>
+      <TH>Issues in 24 HRS</TH>
+      <TH>Issues in 1 to 7 days</TH>
+      <TH>Issues after 7 days</TH>
+   </TR>
+   <TR ALIGN="CENTER">
+      <TD>{{total_issues}}</TD>
+      <TD>{{issues_opened_in_last_24}}</TD>
+      <TD>{{issues_opened_in_1_to_7}}</TD>
+      <TD>{{issues_opened_in_more_than_7}}</TD>
+   </TR>
+</TABLE>
+</body>
+</html>
