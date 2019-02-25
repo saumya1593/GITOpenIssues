@@ -86,7 +86,7 @@ def data():
 	return render_template("data.html",total_issues=total_issues,issues_opened_in_last_24=issues_opened_in_last_24,issues_opened_in_1_to_7=issues_opened_in_1_to_7,issues_opened_in_more_than_7=issues_opened_in_more_than_7)
 	
 	
-if _name_ == "_main_":
+if __name__ == "__main__":
 	# app.run(debug = True)
 	# Bind to PORT if defined, otherwise default to 5000.
     port = int(os.environ.get('PORT', 5000))
