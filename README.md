@@ -18,8 +18,8 @@ To install requirements: `pip install -r requirements.txt`
 This is completely created using HTML. User can input any GIT Repository URL in the Public Repo URL textbox and click on submit button. It will take user to a dashboard that will display the above required information in a table.
 
 Please refer the images below.
-![Page-1](https://drive.google.com/file/d/1j9NL2UGZ7YblXlNWP7ZztXR3AQ7VqzAv/view?usp=sharing)
-![Page-2](https://drive.google.com/file/d/1j9NL2UGZ7YblXlNWP7ZztXR3AQ7VqzAv/view?usp=sharing)
+- ![Alt text](https://drive.google.com/file/d/1j9NL2UGZ7YblXlNWP7ZztXR3AQ7VqzAv/view?usp=sharing)
+- ![Alt text](https://drive.google.com/file/d/1j9NL2UGZ7YblXlNWP7ZztXR3AQ7VqzAv/view?usp=sharing)
 
 ## Back-end
 - The URL fetched from the first page i.e form.html is split to fetch the username and the name of repository.
