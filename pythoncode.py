@@ -10,6 +10,7 @@ import pytz
 from dateutil import tz
 import sys
 from flask import Flask, request, render_template
+from requests.auth import HTTPBasicAuth
 
 app = Flask(__name__)
  
@@ -33,8 +34,11 @@ def data():
 	api_url_gen = re.sub("<x>",user_id,api_url_gen)
 	api_url_gen = re.sub("<y>",repo,api_url_gen)
 
+	print("Git API: "+api_url_gen)
+
 	try:
-		res = requests.get(api_url_gen)
+		res = requests.get(api_url_gen, auth=HTTPBasicAuth('saumya1593','Zindagi@123'))
+		print("Ststus Code: "+str(res.status_code))
 		if res.status_code == 200:
 			pass
 		else:
@@ -42,10 +46,10 @@ def data():
 			sys.exit()
 	except:
 	    return render_template("error.html")
-	# try:
-	# 	res = requests.get(api_url_gen)
-	# except:
-	# 	return render_template("error.html")
+	try:
+		res = requests.get(api_url_gen)
+	except:
+		return render_template("error.html")
 
 	json_content= json.loads(res.text)
 	total_open_issues = json_content['open_issues_count']
@@ -60,7 +64,7 @@ def data():
 	issues_opened_in_more_than_7 = []
 	for i in range(1,(no_of_pages+1)):
 	    url = re.sub("<ff>",str(i),api_url)
-	    response = requests.get(url)
+	    response = requests.get(url,auth=HTTPBasicAuth('saumya1593','Zindagi@123'))
 	    issue_json_content= json.loads(response.text)
 	    for j in range(len(issue_json_content)):
 	        issue_dict = issue_json_content[j]
